@@ -65,6 +65,13 @@ class MainFragment : Fragment() {
         }
     }
 
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        // TODO Listen to the result of the sign in process by filter for when
+        //  SIGN_IN_REQUEST_CODE is passed back. Start by having log statements to know
+        //  whether the user has signed in successfully
+    }
+
     /**
      * Observes the authentication state and changes the UI accordingly.
      * If there is a logged in user: (1) show a logout button and (2) display their name.
